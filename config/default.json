@@ -1,0 +1,7 @@
+{
+  "dbSourceFiles": "./db/src",
+  "rebrickable": {
+    "url": "https://m.rebrickable.com/media/downloads/",
+    "tables": ["colors", "elements", "inventories", "inventory_minifigs", "inventory_parts", "inventory_sets", "minifigs", "part_categories", "part_relationships", "parts", "sets", "themes"]
+  }
+}

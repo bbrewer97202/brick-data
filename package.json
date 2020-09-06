@@ -1,0 +1,35 @@
+{
+  "name": "brickdata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "rebrickable:download": "node dist/download.js",
+    "db:generate": "npm run db:clean && npm run db:create && npm run db:populate",
+    "db:clean": "rimraf db/bricks.db",
+    "db:create": "sqlite3 db/bricks.db < db/sql/schema.sql",
+    "db:populate": "sqlite3 db/bricks.db < db/sql/import.sql"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/config": "0.0.36",
+    "@types/node": "^14.6.0",
+    "@types/node-fetch": "^2.5.7",
+    "nodemon": "^2.0.4",
+    "rimraf": "^3.0.2",
+    "sqlite": "^4.0.14",
+    "sqlite3": "^5.0.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "config": "^3.3.1",
+    "csv-parser": "^2.3.3",
+    "node-fetch": "^2.6.1"
+  }
+}
